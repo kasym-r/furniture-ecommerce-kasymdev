@@ -28,11 +28,3 @@ const usePagination = (data =[], itemsPerPage) => {
 
 export default usePagination;
 
-
-/* how to use it:
-import usePagination from './custom_hooks/usePagination';
-    const { next, prev, jump, currentData, currentPage, maxPage } = usePagination(data , 8);
-    currentData().map(data=>  <li className=''>{data}</li>)
-    then we have buttons like next and prev
-*/
-

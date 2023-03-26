@@ -24,17 +24,3 @@ export default function useIntersectAnimate(options, targetRef) {
   
         return isVisible;
 }
-
-
-// import React, { useRef } from 'react'
-// import useHomeAnimate from '../hooks/useIntersectAnimate';
-// export default function Home() {
-//   const homeRef = useRef(null);
-//   const HomeIsVisible = useHomeAnimate({
-//      root:null,
-//      rootMargin:'0px',
-//      threshold:0.3,
-//   }, homeRef);
-// return  <div ref={homeRef} className={`home ${HomeIsVisible  && 'home-animate'}`}>
-//             <h2>Home PAGE</h2>
-//         </div>

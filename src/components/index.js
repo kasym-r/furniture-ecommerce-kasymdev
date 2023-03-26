@@ -13,11 +13,12 @@ export {default as Gallery } from "./Gallery.jsx";
 export {default as Cart } from "./Cart.jsx";
 export {default as CartItem } from "./CartItem.jsx";
 export {default as Wishlist } from "./Wishlist.jsx";
-export {default as Profile } from "./Profile.jsx";
-export {default as LogRegister } from "./LogRegister.jsx";
+export {default as LogIn } from "./Auth/LogIn.jsx";
+export {default as SignUp } from "./Auth/SignUp.jsx";
 export {default as Catalog } from "./Catalog.jsx";
 export {default as Contact } from "./Contact.jsx";
 export {default as About } from "./About.jsx";
 export {default as Reviews } from "./Reviews.jsx";
 export {default as Notfound } from "./Notfound.jsx";
+export {default as Personalcabinet } from "./Personalcabinet.jsx";
 
