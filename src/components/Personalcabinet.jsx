@@ -83,7 +83,7 @@ const Personalcabinet = () => {
                 handleAvatarChange(e);
                 handleToggleAvatarInput();
               }}
-              className="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+              className=" p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 text-sm"
             />
           </>
         ) : (
