@@ -19,7 +19,9 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         dispatch(setUser(user));
-        navigate('/');
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        navigate(`/personal`);
       })
       .catch((error) => {
         console.error(error);

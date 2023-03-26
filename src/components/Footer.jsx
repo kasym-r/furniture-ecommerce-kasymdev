@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  return <footer className='bg-red-50 pt-4 pb-24 md:py-12 px-4 md:gap-4 lg:gap-20 lg:px-12 flex justify-around items-center flex-wrap'>
+  return <footer className='bg-red-200 pt-4 pb-24 md:py-12 px-4 md:gap-4 lg:gap-20 lg:px-12 flex justify-around items-center flex-wrap'>
     <div className=' flex flex-col justify-center  items-center md:mr-8 mb-8'>
         {/* <Link to="/" className='text-5xl select-none text-gray-900 font-bold tracking-widest'>Sofa.</Link> */}
         <img src="assets/android-chrome-512x512.png" height="80px" width="80px" alt="sofa logo"/>

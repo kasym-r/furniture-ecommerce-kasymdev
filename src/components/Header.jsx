@@ -31,15 +31,15 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-red-50 h-20 px-8 flex justify-between items-center">
+    <div className='bg-red-200 h-20 px-8 flex justify-between items-center'>
       <Link
         to="/"
         className="text-5xl select-none text-gray-900 font-bold tracking-widest"
       >
         <img
           src="assets/android-chrome-512x512.png"
-          height="80px"
-          width="80px"
+          height="70px"
+          width="70px"
           alt="sofa logo"
         />
       </Link>
@@ -60,6 +60,9 @@ const Header = () => {
         </li>
         <li onClick={() => setIsHidden(true)} className="link">
           <Link to="contact">Contacts</Link>
+        </li>
+        <li onClick={() => setIsHidden(true)} className="link">
+          <Link to="/personal">Profile</Link>
         </li>
       </ul>
 

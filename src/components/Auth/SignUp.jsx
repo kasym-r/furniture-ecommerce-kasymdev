@@ -2,35 +2,49 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { setUser } from "../../redux/userSlice";
+import { useNavigate } from "react-router";
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
-  const dispatch = useDispatch()
+  const [errorMessage, setErrorMessage] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSignUp = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         dispatch(setUser(user));
+        navigate(`/login`);
         console.log(auth);
       })
       .catch((error) => {
         console.error(error);
+        if (error.code === "auth/wrong-password") {
+          setErrorMessage("Wrong password");
+        } else if (error.code === "auth/invalid-email") {
+          setErrorMessage("invalid email!");
+        } else if (error.code === "auth/user-not-found") {
+          setErrorMessage("User not found!");
+        } else if (error.code === "auth/email-already-in-use") {
+          setErrorMessage("Email already in use!");
+        }
       });
-  }
+  };
 
   return (
     <div>
-      <form
-        className=" mt-8 py-2 flex flex-col m-auto w-full md:w-2/3 lg:w-1/2"
-      >
+      <form className=" mt-8 py-2 flex flex-col m-auto w-full md:w-2/3 lg:w-1/2">
         <h1 className="text-gray-900 text-3xl mb-4 font-extrabold">REGISTER</h1>
+        {errorMessage && (
+          <p className="text-red-500 text-center">{errorMessage}</p>
+        )}
+
         <input
           className="my-2 px-4 py-2 bg-gray-200"
           type="text"
@@ -84,15 +98,6 @@ const SignUp = () => {
           placeholder="your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          className="my-2 px-4 py-2 bg-gray-200"
-          type="tel"
-          name="phoneNumber"
-          id="phoneNumber"
-          placeholder="your phone number"
-          value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
         />
         <input
           className="my-2 px-4 py-2 bg-gray-200"
