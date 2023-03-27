@@ -10,7 +10,7 @@ const Cart = () => {
     const {cartProds} = useSelector(state => state.cartProds);
 
     let totalPrice = cartProds.reduce((total, prod)=>total+( prod.quantity * prod.price) , 0);    
-    const tax = 11;
+    const tax = Math.round(totalPrice*0.05);
     const [shipping, setShipping] = useState(0);
 
     const addProdToCart =(pro)=>{

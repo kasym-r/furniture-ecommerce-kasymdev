@@ -11,7 +11,7 @@ const Reviews = () => {
         <div className="flex flex-col border rounded-lg gap-3 p-4 md:p-6">
           <div>
             <span className="block text-sm md:text-base font-bold">Hamza Lkhssam</span>
-            <span className="block text-gray-500 text-sm">January 28, 2022</span>
+            <span className="block text-gray-500 text-sm">March 21, 2023</span>
           </div>
  
           <div className="flex gap-0.5 -ml-1">
@@ -43,7 +43,7 @@ const Reviews = () => {
         <div className="flex flex-col border rounded-lg gap-3 p-4 md:p-6">
           <div>
             <span className="block text-sm md:text-base font-bold">Bakr Kouhadi</span>
-            <span className="block text-gray-500 text-sm">December 13, 2021</span>
+            <span className="block text-gray-500 text-sm">February 13, 2023</span>
           </div>
   
           <div className="flex gap-0.5 -ml-1">
@@ -75,7 +75,7 @@ const Reviews = () => {
         <div className="flex flex-col border rounded-lg gap-3 p-4 md:p-6">
           <div>
             <span className="block text-sm md:text-base font-bold">Hakkam Ayoub</span>
-            <span className="block text-gray-500 text-sm">May 10, 2021</span>
+            <span className="block text-gray-500 text-sm">March 10, 2023</span>
           </div>
   
          

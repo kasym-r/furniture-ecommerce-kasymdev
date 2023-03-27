@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { useDispatch } from "react-redux";
-import { setUser } from "../redux/userSlice";
 
 const Header = () => {
   const isTablet = useMediaQuery("(max-width:900px)");
@@ -12,23 +9,6 @@ const Header = () => {
   const { cartProds } = useSelector((state) => state.cartProds);
   const { wishlistProds } = useSelector((state) => state.wishlistProds);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navigate = useNavigate();
-  const dispatch = useDispatch()
-
-  const handleLogout = () => {
-    dispatch(setUser(null))
-    navigate("/login");
-  };
-
-  const handleUserClick = () => {
-    if (!isLoggedIn) {
-      navigate("/login");
-    } else if (navigate.location.pathname === "/personal") {
-      navigate("/");
-    } else {
-      navigate("/personal");
-    }
-  };
 
   return (
     <div className='bg-red-200 h-20 px-8 flex justify-between items-center'>

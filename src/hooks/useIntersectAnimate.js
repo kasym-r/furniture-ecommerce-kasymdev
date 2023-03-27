@@ -4,8 +4,8 @@ export default function useIntersectAnimate(options, targetRef) {
         const [isVisible, setIsVisible] = useState(false);
 
         const callbackFunction = entries =>{
-            const [entry ]= entries; // const entry = entries[0] .. animating only one element div in home
-            setIsVisible(entry.isIntersecting) // every element has this property
+            const [entry ]= entries;
+            setIsVisible(entry.isIntersecting)
         }
 
         const optionsMemo = useMemo(()=>{
