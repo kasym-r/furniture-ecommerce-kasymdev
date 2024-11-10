@@ -38,7 +38,7 @@ const Wishlist = () => {
               <div className="flex flex-wrap gap-4 lg:gap-6 sm:py-2.5">
                 <div className="sm:-my-2.5">
                   <a
-                    href='#'
+                    href="#"
                     className="group w-24 sm:w-40 h-40 sm:h-56 block bg-gray-100 rounded-lg overflow-hidden relative"
                   >
                     <img

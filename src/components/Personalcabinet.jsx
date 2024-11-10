@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Personalcabinet = () => {
   const location = useLocation();
@@ -106,10 +106,17 @@ const Personalcabinet = () => {
         </button>
       </div>
 
-      <Link to="/" className="bg-gray-900 text-white rounded-lg p-1.5 mt-3 mb-3 hover:bg-green-700 transition duration-500">
+      <Link
+        to="/"
+        className="bg-gray-900 text-white rounded-lg p-1.5 mt-3 mb-3 hover:bg-green-700 transition duration-500"
+      >
         Go to HomePage
       </Link>
-      <Link onClick={handleSignOut} to="/" className="bg-gray-900 text-white rounded-lg p-1.5 mt-3 mb-3 hover:bg-red-500 transition duration-500">
+      <Link
+        onClick={handleSignOut}
+        to="/"
+        className="bg-gray-900 text-white rounded-lg p-1.5 mt-3 mb-3 hover:bg-red-500 transition duration-500"
+      >
         Sign Out
       </Link>
     </div>

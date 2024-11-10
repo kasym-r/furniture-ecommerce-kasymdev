@@ -11,7 +11,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className='bg-red-200 h-20 px-8 flex justify-between items-center'>
+    <div className="bg-red-200 h-20 px-8 flex justify-between items-center">
       <Link
         to="/"
         className="text-5xl select-none text-gray-900 font-bold tracking-widest"
@@ -59,7 +59,7 @@ const Header = () => {
           </li>
         )}
         <li>
-        {isLoggedIn ? (
+          {isLoggedIn ? (
             <Link to="/personal">
               <i className="hover:text-gray-900 text-gray-500 fas fa-user"></i>
             </Link>
