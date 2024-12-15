@@ -1,11 +1,5 @@
 # Getting Started
 
-After you clone the project, you can run:
-`npm install && npm start`
-<p> Then Enjoy Your Coding </p>
-
-<!-- ### Some screenshots -->
-
 <div align="center">
 <!-- <image src="https://user-images.githubusercontent.com/68134403/152302033-a9d85331-70a5-4840-ac2e-f038b4aea0b0.png" />
 <image src="https://user-images.githubusercontent.com/68134403/152302036-90f38b05-9b9d-477c-9762-29c7514f3565.png" />
